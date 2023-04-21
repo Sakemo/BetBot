@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <!--Importando Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Importar aquivos de estilo CSS-->
+    <link href="../static/login.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../static/scripts/login.js"></script>
+
+    <!--Atribui nome á guia HTML-->
+    <title>BetBot - Login</title>
+
+    <!--Atributos de SEO-->
+    <meta charset="UTF-8" />
+    <meta name="BetBot - Automatizador de Apostas" />
+  </head>
+
+  <body>
+    <header class="hd">
+      <!--Cabeçalho, testes e imagens-->
+      <section class="bg">
+        <!--Sessão de Titulo-->
+        <div class="title">
+          <!--Logo e Slogan-->
+          <img src="../static/imgs/logo.svg" width="30%" />
+          <p>Automatizador de Apostas</p>
+        </div>
+
+        <div>
+          <!--Menu do Site-->
+          <nav>
+            <ul>
+              <a href="/" class="button">Home</a>
+              <a href="/config" class="button">Configurações</a>
+              <a href="/bot" class="button">Apostas</a>
+              <a href="/login" class="button_s">Login</a>  
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </header>
+
+    <section>
+      <!--Formulario-->
+      <div class="form">
+        <h3>Conexões de Contas</h3>
+        <p>
+          *Todas as outras contas conectadas obedecerão ás apostas automatizadas
+          na conta principal.
+        </p>
+        
+        <div class="main">
+          <input
+            id="main_ac"
+            type="text"
+            name="Úsuario"
+            placeholder="Úsuario"
+          />
+          <input
+            id="main_pass"
+            type="password"
+            name="Senha"
+            placeholder="Senha"
+          />
+          <input
+            id="telegram"
+            type="tel"
+            name="telegram"
+            placeholder="Número do telegram"
+          />
+        <input
+          id="con_1"
+          href="/login/conect"
+          onclick=conect() type='submit'
+          value="Conectar Conta Principal"
+        />
+        </div>
+
+        <div class="ac2">
+          <p>Conta 2</p>
+          <input id="ac_2" type="text" name="Úsuario" placeholder="Úsuario" />
+          <input id="ps_2" type="password" name="Senha" placeholder="Senha" />
+          <input id="con_2" href="/login/conect_2" onclick="conect_2()" type="submit" value="Conectar" />
+        </div>
+
+        <div class="ac3">
+          <p>Conta 3</p>
+          <input id="ac_3" type="text" name="Úsuario" placeholder="Úsuario" />
+          <input id="ps_3" type="password" name="Senha" placeholder="Senha" />
+          <input id="con_3" href="/login/conect_3" onclick="conect_3()" type="submit" value="Conectar" />
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <footer></footer>
+</html>

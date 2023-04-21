@@ -1,0 +1,118 @@
+:root {
+    --maincolor: #126e51;
+    --darkcolor: #505050;
+    --textcolor: #fff;
+    --lg_yellow: #fdbd0f;
+  }
+  
+  * {
+    align-items: center;
+    margin: 5px;
+    padding: 2px;
+    box-sizing: border-box;
+    font-family: "Rajdhani", sans-serif;
+  }
+  
+  h2 {
+    font-size: 40px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+  
+  .hd {
+    text-align: center;
+    color: var(--textcolor);
+  }
+  
+  .bg {
+    border-radius: 20px;
+    background-color: var(--darkcolor);
+    background-image: url("../static/imgs/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 90%;
+    padding: 20px;
+    animation: moveTitle 0.5s ease-in-out;
+  }
+  
+  .title {
+    padding: 5px;
+    width: auto;
+    border-radius: 20px;
+    background-color: var(--maincolor);
+    text-align: center;
+    font-size: larger;
+    font-style: normal;
+    font-weight: lighter;
+    animation: moveTitle 1s ease-in-out;
+  }
+  
+  @keyframes moveTitle {
+    0% {
+      transform: translateX(-100%);
+      opacity: 10%;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 100%;
+    }
+  }
+  
+  .button_s {
+    cursor: cell !important;
+    text-decoration: none;
+    width: 20%;
+    margin: 10px auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    color: var(--textcolor);
+    background-color: var(--maincolor);
+    border: 3px solid var(--lg_yellow);
+    padding: 10px;
+    display: inline-block;
+    margin: 0 10px;
+    animation: moveTitle 1.5s ease-in-out;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  .button {
+    text-decoration: none;
+    width: 20%;
+    margin: 10px auto;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    color: var(--textcolor);
+    background-color: var(--maincolor);
+    border: 1px solid #26ffbe80;
+    padding: 10px;
+    display: inline-block;
+    margin: 0 10px;
+    animation: moveTitle 1.5s ease-in-out;
+  }
+  
+  .config input{
+    width: 24%;
+    display: inline-block;
+    margin: 10px auto;
+    border: 3px solid var(--maincolor);
+    border-radius: 20px;
+    padding: 10px;
+  }
+  
+  .config #sv{
+    display: block;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 0px solid var(--maincolor);
+    color: #020202ea;
+    background-color: var(--lg_yellow);
+  }
+  

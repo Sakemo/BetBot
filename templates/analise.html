@@ -1,0 +1,208 @@
+<html>
+ <head>
+   <!--Importando Fontes-->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap"
+     rel="stylesheet"
+   />
+
+   <!--Importar aquivos de estilo CSS-->
+   <link href="../static/analise.css" rel="stylesheet" />
+   <script src="../static/scripts/analise.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+   <!--Atribui nome á guia HTML-->
+   <title>BetBot - Apostas</title>
+
+   <!--Atributos de SEO-->
+   <meta charset="UTF-8" />
+   <meta name="BetBot - Automatizador de Apostas" />
+ </head>
+   <header class="hd">
+     <!--Cabeçalho, testes e imagens-->
+     <section class="bg">
+       <!--Sessão de Titulo-->
+       <div class="title">
+         <!--Logo e Slogan-->
+         <img src="../static/imgs/logo.svg" width="30%" />
+         <p>Automatizador de Apostas</p>
+       </div>
+
+       <div>
+         <!--Menu do Site-->
+         <nav>
+           <ul>
+             <a href="/" class="button">Home</a>
+             <a href="/config" class="button">Configurações</a>
+             <a href="/bot" class="button_s">Apostas</a>
+             <a href="/login" class="button">Login</a>           
+          </ul>
+         </nav>
+       </div>
+     </section>
+   </header class=header>
+        <!--Opções-->
+       <div class="square" onclick="showOptions()">Tipo</div>
+       <div class="options" id="options" style="display:none">
+           <div class="option" onclick="changeText('Padrão')">Padrão</div>
+           <div class="option" onclick="changeText('Entrada')">Entrada</div>
+       </div>
+
+       <div class="square2" onclick="showOptions2()">Mercado</div>
+       <div class="options2" id="options2" style="display:none">
+           <div class="option2" onclick="changeText2('Casa Vence')">Casa Vence</div>
+           <div class="option2" onclick="changeText2('Empate ')">Empate</div>
+           <div class="option2" onclick="changeText2('Fora Vence')">Fora Vence</div>
+           <div class="option2" onclick="changeText2('AM | Sim')">Ambas Marcam | Sim</div>
+           <div class="option2" onclick="changeText2('AM | Não')">Ambas Marcam | Não</div>
+           <div class="option2" onclick="changeText2('Over 0.5')">Over 0.5</div>
+           <div class="option2" onclick="changeText2('Over 1.5')">Over 1.5</div>
+           <div class="option2" onclick="changeText2('Over 2.5')">Over 2.5</div>
+           <div class="option2" onclick="changeText2('Over 3.5')">Over 3.5</div>
+           <div class="option2" onclick="changeText2('PM | Casa')">Primeiro a Marcar | Casa</div>
+           <div class="option2" onclick="changeText2('PM | Fora')">Primeiro a Marcar | Fora</div>
+       </div>
+
+        <input id="name" type="text" placeholder="Nome do Robô" onchange="name = this.value" />
+
+        <div class="league">
+            <input type="checkbox" value="Copa"/>Copa do Mundo
+            <input type="checkbox" value="Euro"/>Euro Cup
+            <input type="checkbox" value="Sul"/>Liga Sul-Americana
+            <input type="checkbox" value="Premier"/>Premier League
+        </div>
+
+        <div id="save_bt" onclick="saveText2()">Salvar</div>
+        <div id="reset_bt" onclick="reset()">Resetar</div>
+            
+     <!--Tabela de Analise-->
+     <table class="tb" border="1">
+       <tr>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+         onmousedown="return false;"
+         onselectstart="return false;"
+         onclick="selectCell(this)"
+       ></td>
+       </tr>
+
+       <tr>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+
+         <td
+         onmousedown="return false;"
+         onselectstart="return false;"
+         onclick="selectCell(this)"
+       ></td>
+       </tr>
+
+       <tr>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+           onmousedown="return false;"
+           onselectstart="return false;"
+           onclick="selectCell(this)"
+         ></td>
+         <td
+         onmousedown="return false;"
+         onselectstart="return false;"
+         onclick="selectCell(this)"
+       ></td>
+       </tr>
+     </table>
+     <input class="button" type="submit" value="Começar as Apostas" href="/bot/aposta" />
+     <p id="text">
+       Quando clicar no botão, o programa vai começar a rodar em segundo plano
+       na BET365 e apostar de acordo com os seus padrões
+     </p>
+   </section>
+   <!--Tabela de Analise-->
+ </body>
+ <footer>
+ </footer>
+</html>

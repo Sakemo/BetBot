@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Importando Fontes-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet" />
+
+  <!--Importar aquivos de estilo CSS-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="../static/config.css" rel="stylesheet" />
+  <script src="../static/scripts/config.js"></script>
+
+  <!--Atribui nome á guia HTML-->
+  <title>BetBot - Configurações</title>
+
+  <!--Atributos de SEO-->
+  <meta charset="UTF-8" />
+  <meta name="BetBot - Automatizador de Apostas" />
+</head>
+
+<body>
+  <header class="hd">
+    <!--Cabeçalho, testes e imagens-->
+    <section class="bg">
+      <!--Sessão de Titulo-->
+      <div class="title">
+        <!--Logo e Slogan-->
+        <img src="../static/imgs/logo.svg" width="30%" />
+        <p>Automatizador de Apostas</p>
+      </div>
+
+      <div>
+        <!--Menu do Site-->
+        <nav>
+          <ul>
+            <a href="/" class="button">Home</a>
+            <a href="/config" class="button_s">Configurações</a>
+            <a href="/bot" class="button">Apostas</a>
+            <a href="/login" class="button">Login</a>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </header>
+
+  <!--Configurações-->
+  <section class="config">
+    <input id="martingale" type="number" placeholder="Martingale" min="0" max="999">
+    <input id="stopwin" type="number" placeholder="Stop Win" min="0" max="999">
+    <input id="stoploss" type="number" placeholder="Stop Loss" min="0" max="999">
+    <input id="valoraposta" type="number" placeholder="Valor de Aposta" min="0" max="999">
+    <input id="sv" href="/bot/config" type="submit" value="Salvar">
+  </section>
+
+  <script src="../static/scripts/config.js"></script>
+</body>
+
+</html>
